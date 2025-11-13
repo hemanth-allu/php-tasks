@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hemanth Portfolio</title>
+  <style>
+    :root{
+      --bg1:#0f172a;--bg2:#0f4c81;--accent1:#ff6b6b;--accent2:#7c3aed;--accent3:#06b6d4;--text:#e6eef8;--muted:#a8c0d6;
+    }
+    body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(120deg,var(--bg1),var(--bg2));color:var(--text);animation:bgPan 15s ease-in-out infinite;background-size:200% 200%;}
+    @keyframes bgPan{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+    header{text-align:center;padding:40px 20px;}
+    .profile-pic{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid var(--accent3);box-shadow:0 0 25px rgba(6,182,212,0.5);animation:float 4s ease-in-out infinite;margin-bottom:20px;}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    h1{font-size:2rem;margin:10px 0;color:white;}
+    nav a{color:var(--muted);margin:0 10px;text-decoration:none;font-weight:600;transition:.3s}
+    nav a:hover{color:var(--accent3)}
+    section{max-width:900px;margin:40px auto;padding:20px;background:rgba(255,255,255,0.05);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.3);}
+    h2{color:var(--accent3);}
+    .skills{display:flex;flex-wrap:wrap;gap:15px;}
+    .skill{flex:1 1 200px;background:rgba(255,255,255,0.08);padding:10px 15px;border-radius:8px;transition:.3s}
+    .skill:hover{transform:translateY(-5px);background:linear-gradient(90deg,var(--accent2),var(--accent3));}
+    .projects pre{background:rgba(0,0,0,0.4);padding:10px;border-radius:8px;color:#f0f0f0;overflow-x:auto;}
+    form{display:flex;flex-direction:column;gap:10px;}
+    input,textarea,select{padding:10px;border:none;border-radius:8px;background:rgba(255,255,255,0.1);color:white;}
+    button{background:linear-gradient(90deg,var(--accent2),var(--accent3));color:white;padding:10px;border:none;border-radius:8px;font-weight:700;cursor:pointer;transition:.3s;}
+    button:hover{transform:scale(1.05);}
+    footer{text-align:center;margin:30px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="IMG_20240106_174302_965.jpg" alt="Profile Photo" class="profile-pic">
+    <h1>Hemanth Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Hemanth — a Python enthusiast and web developer passionate about creating smart tools and visually appealing projects. I love experimenting with automation, AI, and creative coding projects that blend technology and design.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">Flask</div>
+      <div class="skill">OpenCV</div>
+      <div class="skill">Git & CLI</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Mini Python Projects</h2>
+    <div class="projects">
+      <h3>4. Weather Report</h3>
+      <p>It will shows the accurate wheather conditions of different locations... </p>
+      <img src="wheather.jpeg" alt="image loading....">
+
+
+      <h3>5. To-Do List (CLI)</h3>
+      <p>It will be used to keep reminding our work which are need to be done... </p>
+      <img src="to do list.jpeg" alt="image loading....">
+      
+ 
+
+  
+
+      <h3>7. Simple Calculator</h3>
+      <p>To solve the complicated calculations by using Arithemtic operations</p>
+      <img src="calculator.jpeg" alt="image loading...." style="width: 10vw;">
+      
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm" onsubmit="return handleContact(event)">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section id="feedback">
+    <h2>Feedback</h2>
+    <form id="feedbackForm" onsubmit="return handleFeedback(event)">
+      <select id="rating" required>
+        <option value="">Rate Portfolio</option>
+        <option>5 - Excellent</option>
+        <option>4 - Great</option>
+        <option>3 - Good</option>
+        <option>2 - Okay</option>
+        <option>1 - Needs Work</option>
+      </select>
+      <textarea id="fb" rows="3" placeholder="Comments..."></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </section>
+
+  <footer>© 2025 Hemanth Portfolio — Built with ❤️ and gradients</footer>
+</body>
+</html>
